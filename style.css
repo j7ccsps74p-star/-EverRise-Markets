@@ -124,3 +124,13 @@ color:#aaa;
 margin-top:50px;
 border-top:2px solid gold;
 }
+.card h2{
+color:gold;
+font-size:32px;
+margin:15px 0;
+}
+
+.card p{
+margin:8px 0;
+color:#d5d5d5;
+}
