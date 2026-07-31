@@ -134,3 +134,46 @@ margin:15px 0;
 margin:8px 0;
 color:#d5d5d5;
 }
+.ticker{
+
+background:#000;
+
+border-top:1px solid gold;
+
+border-bottom:1px solid gold;
+
+overflow:hidden;
+
+white-space:nowrap;
+
+padding:12px 0;
+
+}
+
+.ticker-content{
+
+display:inline-block;
+
+color:gold;
+
+font-weight:bold;
+
+animation:ticker 30s linear infinite;
+
+}
+
+@keyframes ticker{
+
+0%{
+
+transform:translateX(100%);
+
+}
+
+100%{
+
+transform:translateX(-100%);
+
+}
+
+}
