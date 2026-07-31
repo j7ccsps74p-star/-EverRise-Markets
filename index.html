@@ -722,78 +722,50 @@ popup.style.display="none";
 setInterval(showPopup,12000);
 
 showPopup();
+ <script>
+const names=[
+"James from Canada opened a Gold Account.",
+"Sophia from Australia completed KYC verification.",
+"Michael from Germany made a successful deposit.",
+"Emma from Singapore upgraded to a VIP Account.",
+"Daniel from South Africa started trading Forex.",
+"Olivia from the UK opened a Live Account.",
+"Noah from the UAE verified his account.",
+"Lucas from Brazil funded his trading wallet."
+];
+
+const images=[
+"images/trader1.jpg",
+"images/trader2.jpg",
+"images/trader3.jpg",
+"images/trader4.jpg"
+];
+
+function showPopup(){
+
+let randomText=names[Math.floor(Math.random()*names.length)];
+
+let randomImage=images[Math.floor(Math.random()*images.length)];
+
+document.getElementById("popupText").innerHTML=randomText;
+
+document.getElementById("popupImage").src=randomImage;
+
+let popup=document.getElementById("livePopup");
+
+popup.style.display="block";
+
+setTimeout(()=>{
+popup.style.display="none";
+},6000);
+
+}
+
+setInterval(showPopup,12000);
+
+showPopup();
+</script>   
 </script>
  Home | Markets | About | Contact | Login
 © 2026 EverRise Markets. All Rights Reserved.
-</<!-- Your other sections -->
-
-
-
-    </p>
-</section>
-
-</<div id="supportButton" onclick="toggleSupport()" style="
-position:fixed;
-bottom:25px;
-right:25px;
-background:#D4AF37;
-color:#0B1F3A;
-padding:16px 22px;
-border-radius:50px;
-cursor:pointer;
-font-weight:bold;
-box-shadow:0 8px 20px rgba(0,0,0,.3);
-z-index:9999;">
-💬 Live Support
-</div>
-
-<div id="supportBox" style="
-display:none;
-position:fixed;
-bottom:90px;
-right:25px;
-width:320px;
-background:white;
-border-radius:15px;
-box-shadow:0 15px 40px rgba(0,0,0,.3);
-overflow:hidden;
-z-index:9999;">
-
-<div style="background:#0B1F3A;color:white;padding:15px;">
-<b>EverRise Markets Support</b>
-</div>
-
-<div style="padding:20px;color:#333;">
-<p>Welcome! How can we help you today?</p>
-
-<p><b>Signal Support</b><br>
-+1 (253) 453-6197</p>
-
-<p><b>Email</b><br>
-support@everrisemarkets.com</p>
-
-<a href="mailto:support@everrisemarkets.com"
-style="
-display:block;
-text-align:center;
-background:#D4AF37;
-color:#0B1F3A;
-padding:12px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;">
-Email Support
-</a>
-
-</div>
-
-</div>
-
-<script>
-function toggleSupport(){
-const box=document.getElementById("supportBox");
-box.style.display=(box.style.display==="block")?"none":"block";
-}
-</script>>>
-</html>
 
