@@ -567,7 +567,7 @@ A demonstration platform for learning about online trading interfaces and financ
 
 <p>
 
-Home | Markets | About | Contact | Login
+
 
 </p>
 
@@ -575,7 +575,7 @@ Home | Markets | About | Contact | Login
 
 <p>
 
-© 2026 EverRise Markets. All Rights Reserved.
+
 
 </p>
 
@@ -640,7 +640,37 @@ index=0;
 setInterval(showPopup,7000);
 
 showPopup();
+<section style="background:#0B1F3A; color:#FFFFFF; padding:60px 20px; text-align:center;">
 
+    <h2 style="color:#D4AF37;">💬 Live Support</h2>
+
+    <p>
+        Our support team is available to assist you with account registration,
+        deposits, withdrawals, KYC verification, and general trading inquiries.
+    </p>
+
+    <div style="margin-top:25px;">
+
+        <a href="#"
+           style="display:inline-block;
+                  background:#D4AF37;
+                  color:#0B1F3A;
+                  padding:15px 35px;
+                  border-radius:50px;
+                  text-decoration:none;
+                  font-weight:bold;
+                  margin:10px;">
+            Live Chat
+        </a>
+
+        <p style="margin-top:20px; font-size:18px;">
+            <strong>Signal Support:</strong><br>
+            +1 (253) 453-6197
+        </p>
+
+    </div>
+
+</section>
 </script>
     <section id="contact" style="padding:60px 20px; text-align:center;">
 
@@ -656,6 +686,81 @@ showPopup();
     </p>
 
 </section>
+    <div id="livePopup" style="
+position:fixed;
+bottom:20px;
+left:20px;
+display:none;
+background:#ffffff;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+width:340px;
+overflow:hidden;
+z-index:9999;
+">
+
+<img id="popupImage"
+src="images/trader1.jpg"
+style="width:100%;height:170px;object-fit:cover;">
+
+<div style="padding:18px;">
+
+<h3 style="margin:0;color:#0B1F3A;">
+Recent Trading Activity
+</h3>
+
+<p id="popupText" style="color:#555;margin-top:10px;">
+Loading...
+</p>
+
+</div>
+
+</div>
+    <script>
+const names=[
+"James from Canada opened a Gold Account.",
+"Sophia from Australia completed KYC verification.",
+"Michael from Germany made a successful deposit.",
+"Emma from Singapore upgraded to a VIP Account.",
+"Daniel from South Africa started trading Forex.",
+"Olivia from the UK opened a Live Account.",
+"Noah from the UAE verified his account.",
+"Lucas from Brazil funded his trading wallet."
+];
+
+const images=[
+"images/trader1.jpg",
+"images/trader2.jpg",
+"images/trader3.jpg",
+"images/trader4.jpg"
+];
+
+function showPopup(){
+
+let randomText=names[Math.floor(Math.random()*names.length)];
+
+let randomImage=images[Math.floor(Math.random()*images.length)];
+
+document.getElementById("popupText").innerHTML=randomText;
+
+document.getElementById("popupImage").src=randomImage;
+
+let popup=document.getElementById("livePopup");
+
+popup.style.display="block";
+
+setTimeout(()=>{
+popup.style.display="none";
+},6000);
+
+}
+
+setInterval(showPopup,12000);
+
+showPopup();
+</script>
+ Home | Markets | About | Contact | Login
+© 2026 EverRise Markets. All Rights Reserved.
 </body>
 </html>
 
