@@ -34,23 +34,21 @@ backdrop-filter:blur(4px);
 
 <p>Fast execution • Tight spreads • 24/7 Support</p
 
-<a href="register.html" style="text-decoration:none;">
-    <button style="
-        background:linear-gradient(135deg,#D4AF37,#F4D03F);
-        color:#0B1F3A;
-        padding:16px 40px;
-        font-size:18px;
-        font-weight:700;
-        border:none;
-        border-radius:50px;
-        cursor:pointer;
-        box-shadow:0 8px 25px rgba(212,175,55,0.4);
-        transition:all .3s ease;
-        letter-spacing:0.5px;
-    ">
-        Open Live Account
-    </button>
-</a>
+<form onsubmit="createAccount(event)">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+
+    <button type="submit">Create Account</button>
+</form>
+
+<script>
+function createAccount(event){
+    event.preventDefault();
+    alert("Demo account created successfully!");
+    window.location.href = "dashboard.html";
+}
+</script>
  
 </a>
 </div>
